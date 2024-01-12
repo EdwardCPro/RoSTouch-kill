@@ -1,0 +1,13 @@
+local function zone (touched)
+	local zonetouched = touched.Parent
+	local humanoid = zonetouched:FindFirstChildWhichIsA("Humanoid")
+	if humanoid then
+		humanoid.Health = 0
+	end
+end
+
+kill.Touched:Connect(zone)
+
+-- This is a LUA script. This is to be used in Roblox Studio. 
+-- Make sure to put this script in the part that is killing the player if touching it.
+-- Free to use under "The Unlicense" which means you can modify it however you want and sell / make closed-source versions of games with it.
